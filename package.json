@@ -1,0 +1,25 @@
+{
+  "name": "speedcyclo",
+  "version": "1.0.0",
+  "description": "Proyecto Fin del Ciclo Formativo de Grado Superior de Desarrollo de Aplicaciones Web",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "Gregorio Cabrera Tamayo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.5",
+    "socket.io": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
