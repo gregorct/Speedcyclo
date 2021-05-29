@@ -7,11 +7,9 @@ import './assets/css/App.css'
 import 'fontsource-roboto'
 
 // Componentes
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar'
 import Popup from './components/Popup'
 import {Container} from '@material-ui/core'
-import Typography from '@material-ui/core/Typography'
-import CopyrightIcon from '@material-ui/icons/Copyright'
 
 // Paginas
 import Inicio from './pages/Inicio'
@@ -44,14 +42,10 @@ function App() {
           </Switch>
           <Popup />
         </Container>
-        
-        <Typography variant="h5" color="initial" style={{color: 'white', position: 'fixed', bottom: 0, width: '100%', height: 40, textAlign: 'center'}}>
-          <CopyrightIcon /> 2021 - Gregorio Cabrera Tamayo
-        </Typography> 
               
       </div>
     </BrowserRouter>  
-  );
+  )
 }
 
-export default App;
+export default App
