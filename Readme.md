@@ -2,6 +2,7 @@
 
 El proyecto esta basado en NodeJs, React, Express y Socket.IO.
 Está preparado para ser subido a heroku, solo deberás configurar unos pocos parámetros.
+>Para utilizar el sistema es necesario utilizar dos sensores bluetooth, cadencia y frecuencia cardiaca.
 
  - /client/src/utils/Url.js -> Cambiar la Url
  - Variables de entorno
