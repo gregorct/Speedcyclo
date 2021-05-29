@@ -79,15 +79,17 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
 // Configuración de rutas
-//app.use('/', express.static('./client/build'))
-//app.use('/main', express.static('./client/build'))
 const __dirname = path.resolve()
 app.use(express.static(path.join(__dirname, "./client/build")))
-//app.use(express.static("./client/public"))
 
 app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"))
+    if(!req._parsedUrl.path.startsWith('/api/')) {
+        res.sendFile(path.join(__dirname, "./client/build/index.html"))
+    }
+    next()
+    
   })
+
 app.use('/api/users', usersRoutes)
 app.use('/api/sessions', sessionsRoutes)
 
