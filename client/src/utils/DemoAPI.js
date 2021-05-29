@@ -1,7 +1,8 @@
 import socketIOClient from "socket.io-client"
+import {getUrl} from './Url'
 
 // Generador de usuario Dummy
-const SOCKET_SERVER_URL = "https://speedcyclo.herokuapp.com/"
+const SOCKET_SERVER_URL = getUrl()
 let socket = null
 let intervaloDummy = null
 let myUsername = null

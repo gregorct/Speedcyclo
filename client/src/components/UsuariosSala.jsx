@@ -8,12 +8,13 @@ import {useHistory} from 'react-router-dom'
 import Usuario from './Usuario'
 import UsuarioVacio from './UsuarioVacio'
 import swal from 'sweetalert'
+import {getUrl} from '../utils/Url'
 
 
 function UsuariosSala(props) {
     const usuariosIniciales = Array(8).fill({U: "Vacio", H: 0, C: 0, P: 0})
     const cookies = new Cookies()
-    const SOCKET_SERVER_URL = "https://speedcyclo.herokuapp.com/"
+    const SOCKET_SERVER_URL = getUrl()
     const socketRef = useRef();
     const [values, setValues] = useState(usuariosIniciales);
     const username = cookies.get('username')

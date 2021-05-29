@@ -4,9 +4,10 @@ import {setUserState} from '../actions/user'
 import {getSessions} from '../actions/sessions'
 import socketIOClient from "socket.io-client"
 import {setSalas} from '../actions/salas'
+import {getUrl} from './Url'
 
 const cookies = new Cookies()
-const SOCKET_SERVER_URL = "https://speecyclo.herokuapp.com/"
+const SOCKET_SERVER_URL = getUrl()
 
 let socket = socketIOClient(SOCKET_SERVER_URL, {
     query: { type: "system", roomId: '', username: '' },

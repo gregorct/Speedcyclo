@@ -1,8 +1,9 @@
 import axios from 'axios'
 import Cookies from 'universal-cookie'
+import {getUrl} from '../utils/Url'
 const cookies = new Cookies()
 
-const url = 'https://speedcyclo.herokuapp.com/api/'
+const url = `${getUrl()}api/`
 
 const authAxios = axios.create({
     headers: {
